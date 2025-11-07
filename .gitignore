@@ -1,0 +1,441 @@
+# PDF Bank Statement Processing System - Git Ignore
+# Security and sensitive files
+
+# ==============================================
+# SENSITIVE DATA - NEVER COMMIT
+# ==============================================
+
+# PDF Bank Statement Files (sensitive financial data)
+*.pdf
+!docs/*.pdf
+!tests/fixtures/*.pdf
+!README.pdf
+
+# Password and Secret Files
+password.txt
+secrets.txt
+*.key
+*.pem
+*.p12
+*.pfx
+secrets/
+.credentials
+api_keys.txt
+token.txt
+data/password*.txt
+data/*.key
+data/*.pem
+data/secrets*
+
+# Configuration Files with Secrets
+.env
+.env.*
+!.env.example
+config/secrets.yml
+config/secrets.yaml
+config/passwords.json
+local_config.json
+
+# Data Directory (sensitive files)
+data/
+!data/.gitkeep
+!data/README.md
+
+# ==============================================
+# SENSITIVE DATA - NEVER COMMIT
+# ==============================================
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# ==============================================
+# APPLICATION SPECIFIC
+# ==============================================
+
+# Reports and Generated Files (sensitive financial reports)
+reports/
+generated/
+output/
+*.xlsx
+*.csv
+*.json
+
+# Coverage Reports (may contain sensitive data)
+htmlcov/
+coverage/
+*.cover
+
+# Temporary Files
+temp/
+tmp/
+*.tmp
+*.temp
+
+# Logs (may contain sensitive transaction data)
+logs/
+*.log
+log_*.txt
+
+# Data Files
+*.sqlite
+*.db
+*.sql
+
+# Backup Files
+*.backup
+*.bak
+backup/
+backups/
+backups_*/
+
+# Archive Files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Lock Files (keep requirements.txt but ignore these)
+Pipfile.lock
+poetry.lock
+conda-lock.yml
+
+# ==============================================
+# DOCKER AND CONTAINERS
+# ==============================================
+
+# Docker
+.docker/
+Dockerfile.local
+docker-compose.override.yml
+
+# Container volumes
+postgres-data/
+redis-data/
+prometheus_data/
+grafana_data/
+
+# ==============================================
+# IDE AND EDITORS
+# ==============================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# ==============================================
+# SYSTEM FILES
+# ==============================================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ==============================================
+# MONITORING AND METRICS
+# ==============================================
+
+# Monitoring Data
+monitoring/data/
+metrics/
+*.metrics
+health_check.json
+
+# Grafana
+grafana/data/
+grafana/logs/
+
+# Prometheus
+prometheus/data/
+prometheus/logs/
+
+# ==============================================
+# CREDENTIAL AND SECRETS MANAGEMENT
+# ==============================================
+
+# AWS Credentials
+.aws/
+~/.aws/
+aws-credentials
+
+# Azure Credentials
+.azure/
+azure-credentials.json
+
+# Google Cloud
+gcloud/
+.gcloud/
+service-account-key.json
+
+# Kubernetes
+kube-config
+*.kubeconfig
+kubectl-credentials
+
+# ==============================================
+# DEVELOPMENT AND DEBUGGING
+# ==============================================
+
+# Debug Files
+debug_*.py
+debug/
+*.debug
+test_debug.py
+
+# Performance Profiles
+*.prof
+*.pstats
+profile_results/
+
+# Documentation Build
+docs/_build/
+docs/build/
+site/
+
+# ==============================================
+# CI/CD AND DEPLOYMENT
+# ==============================================
+
+# CI/CD Files
+.github/
+.gitlab-ci.yml
+.travis.yml
+.circleci/
+bitbucket-pipelines.yml
+appveyor.yml
+
+# Deployment
+deploy/
+deployment/
+*.deployment
+k8s/
+kubernetes/
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Ansible
+ansible-vault
+
+# ==============================================
+# LOCAL DEVELOPMENT
+# ==============================================
+
+# Local Environment Files
+local.env
+.local
+dev_config.yml
+dev_settings.json
+
+# User Specific Files
+user_config.json
+local_settings.py
+personal_config.ini
+
+# Test Artifacts
+test-results/
+test-output/
+test-reports/
+
+# Performance Benchmarks
+benchmark/
+benchmarks/
+*.benchmark
+performance_results/
+
+# ==============================================
+# ARCHIVE AND COMPRESSION
+# ==============================================
+
+# Compiled archives
+*.zip
+*.tar.gz
+*.tgz
+*.tar.bz2
+*.tar.xz
+*.rar
+*.7z
+
+# ==============================================
+# PROJECT SPECIFIC - ORGANIZED STRUCTURE
+# ==============================================
+
+# Examples Directory (may contain sensitive examples)
+examples/
+!examples/.gitkeep
+!examples/README.md
+
+# Documentation (keep docs clean but allow some files)
+docs/
+!docs/.gitkeep
+!docs/README.md
+!docs/AGENTS.md
+!docs/*.example
+
+# Scripts Directory (deployment scripts only)
+scripts/
+!scripts/.gitkeep
+!scripts/README.md
+!scripts/*.sh
+!scripts/*.bat
+!scripts/*.example
+
+# Coverage Directory (generated reports)
+coverage/
+!coverage/.gitkeep
+!coverage/README.md
+
+# ==============================================
+# SECURITY NOTES
+# ==============================================
+
+# KEEP TRACKING (use .gitkeep files to track empty directories)
+# - data/           # Contains sensitive PDFs and passwords
+# - reports/        # Contains generated Excel reports
+# - logs/          # Contains log files with transaction data
+# - coverage/      # Contains test coverage reports
+# - examples/      # Keep directory structure
+# - docs/          # Keep directory structure
+# - scripts/       # Keep directory structure
+
+# Any file containing sensitive data (passwords,
+# API keys, bank statements, personal information)
+# should NOT be committed to version control.
+#
+# If you accidentally commit sensitive data:
+# 1. Remove the file immediately
+# 2. Use git filter-branch or BFG to rewrite history
+# 3. Force push to remote
+# 4. Rotate all affected credentials
